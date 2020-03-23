@@ -3,7 +3,6 @@ import './App.css';
 import Home from './components/Home';
 import {BrowserRouter as Router, Route, Switch,} from "react-router-dom";
 import jwt_decode from 'jwt-decode';
-import dotenv from 'dotenv';
 import {WordPage} from './components/WordPage';
 import LoginForm from "./components/LoginForm";
 import RegisterForm from "./components/RegisterForm";
@@ -11,8 +10,6 @@ import setAuthToken from "./helpers/setAuthToken";
 import ProtectedRoute from "./components/protected/ProtectedRoute";
 import WordList from "./components/protected/WordList";
 import {logoutUser} from "./helpers/AuthFunction";
-
-dotenv.config();
 
 if (localStorage.jwtToken) {
     // set auth token header
