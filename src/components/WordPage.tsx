@@ -27,7 +27,7 @@ export const WordPage = () => {
             return;
         }
 
-        axios.get(`${process.env.BACKEND_HOST}/api/wl/get/${paramWord}`)
+        axios.get(`${process.env.REACT_APP_API_HOST}/api/wl/get/${paramWord}`)
             .then(res => {
                 if (res.data) {
                     setWidLoading(false);
@@ -52,7 +52,7 @@ export const WordPage = () => {
 
         if (star) {
             // remove word
-            axios.post(`${process.env.BACKEND_HOST}/api/wl/remove`,
+            axios.post(`${process.env.REACT_APP_API_HOST}/api/wl/remove`,
                 {
                     wid: wid,
                 })
@@ -75,7 +75,7 @@ export const WordPage = () => {
                 });
         } else {
             // add word
-            axios.post(`${process.env.BACKEND_HOST}/api/wl/add/${paramWord}`)
+            axios.post(`${process.env.REACT_APP_API_HOST}/api/wl/add/${paramWord}`)
                 .then(res => {
                     if (res.data.success) {
                         setStar(true);

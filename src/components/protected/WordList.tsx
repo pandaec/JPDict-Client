@@ -21,7 +21,7 @@ const WordList = () => {
     let [wordList, setWordList] = useState<any>([]);
 
     useEffect(() => {
-        axios.get(`${process.env.BACKEND_HOST}/api/wl/`)
+        axios.get(`${process.env.REACT_APP_API_HOST}/api/wl/`)
             .then(res => {
                 console.log(res);
                 const dbList: DBList = res.data;
@@ -52,7 +52,7 @@ const WordList = () => {
     function handleDelete(evt: MouseEvent<HTMLButtonElement>, word: DBWord) {
         evt.preventDefault();
 
-        axios.post(`${process.env.BACKEND_HOST}/api/wl/remove`,
+        axios.post(`${process.env.REACT_APP_API_HOST}/api/wl/remove`,
             {
                 wid: [word._id],
             })

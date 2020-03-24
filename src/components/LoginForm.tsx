@@ -25,7 +25,7 @@ const LoginForm = () => {
             'email': userInfo.email,
             'password': userInfo.password,
         };
-        axios.post(`${process.env.BACKEND_HOST}/api/users/login`, postBody)
+        axios.post(`${process.env.REACT_APP_API_HOST}/api/users/login`, postBody)
             .then(res => {
                 if (res.data && res.data.success) {
                     // login sucess

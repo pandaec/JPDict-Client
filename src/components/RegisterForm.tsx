@@ -34,7 +34,7 @@ const RegisterForm = () => {
             'email': userInfo.email,
             'password': userInfo.password,
         };
-        axios.post(`${process.env.BACKEND_HOST}/api/users/register`, postBody)
+        axios.post(`${process.env.REACT_APP_API_HOST}/api/users/register`, postBody)
             .then(res => {
                 console.log(res.data);
 

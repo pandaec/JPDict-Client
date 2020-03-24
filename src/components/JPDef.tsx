@@ -52,9 +52,9 @@ export default class JPDef extends React.Component<Props, State>{
 
         let qpath = '';
         if (this.props.lang === Lang.jp) {
-            qpath = `${process.env.BACKEND_HOST}/api/w/jp/${this.props.searchWord}`;
+            qpath = `${process.env.REACT_APP_API_HOST}/api/w/jp/${this.props.searchWord}`;
         } else if (this.props.lang === Lang.en) {
-            qpath = `${process.env.BACKEND_HOST}/api/w/en/${this.props.searchWord}`;
+            qpath = `${process.env.REACT_APP_API_HOST}/api/w/en/${this.props.searchWord}`;
         }
 
         axios.get(qpath)
