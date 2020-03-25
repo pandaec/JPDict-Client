@@ -8,3 +8,7 @@ This repo is the front end for JPDict. JPDict is a Japanese dictionary that prov
 + Responsive design that works on phone with small screen
 + (Future) Create test for bookmarked words
 + (Future) Export bookmarked words as csv / excel for importing to memory card app like Anki
+
+
+### Technologies
++ React, node.js, typescript, mongodb, aws
