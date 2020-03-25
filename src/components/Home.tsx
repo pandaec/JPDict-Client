@@ -5,7 +5,7 @@ import SidebarParent from "./SidebarParent";
 
 const Home = () => {
     const history = useHistory();
-    const [queryWord, setQueryInput] = useState('');
+    const [queryWord, setQueryInput] = useState('探す');
 
     function formatInput(s: string) {
         return encodeURIComponent(s.trim());
